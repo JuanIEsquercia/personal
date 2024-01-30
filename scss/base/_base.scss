@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.navegador{
+    position: fixed;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.titulo {
+    margin-top: 250px;
+    @include box;
+    @include flex-center (column);    
+    .titulo__h{
+        animation: focus-in-contract-bck 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        font-family: $font-primary;
+}
+}

@@ -1,0 +1,13 @@
+@mixin box {
+    height: 600px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@mixin flex-center ($direction) {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: $direction;
+}
