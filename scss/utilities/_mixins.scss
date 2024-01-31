@@ -2,6 +2,7 @@
     height: 600px;
     width: 100%;
     box-sizing: border-box;
+    background: linear-gradient(90deg, #4b6094 0%, #a8815b 100%);
 }
 
 @mixin flex-center ($direction) {
@@ -11,3 +12,4 @@
     flex-wrap: wrap;
     flex-direction: $direction;
 }
+
