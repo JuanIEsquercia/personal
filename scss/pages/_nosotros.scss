@@ -1,0 +1,26 @@
+.sec-tarjetas {
+    @include box;
+    display: flex;
+    @include flex-variable (row, space-around, center, wrap);
+
+    div {
+        @include card;
+
+        h2 {
+            overflow-y: hidden;
+            font-size: map-get($text, title-mobile);
+            padding: 10%;
+            width: 100%;
+
+            .icono-tarjetas {
+                margin-right: 10px;
+                height: map-get($text, title-mobile);
+            }
+        }
+
+        p {
+            padding: 15px;
+            text-align: center;
+        }
+    }
+}

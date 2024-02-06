@@ -1,0 +1,17 @@
+.sec-info{
+    @include box-dos-variante;
+    font-family: $font-primary;
+    display: flex;
+    @include flex-variable (row, space-around, center, wrap);
+    padding-bottom: 30px;
+    .cartas-info{
+        @include card;
+        border-radius: 0;
+        margin-top: 20px;
+        .boton{
+            position: absolute;
+            bottom: 30px;
+            left: 115px;
+        }
+    }
+}

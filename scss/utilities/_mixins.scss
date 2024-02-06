@@ -3,6 +3,26 @@
     width: 100%;
     box-sizing: border-box;
     background: linear-gradient(90deg, #4b6094 0%, #a8815b 100%);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+@mixin box-dos {
+    height: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #a8815b 0%, #4b6094 100%);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+@mixin box-dos-variante{
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #a8815b 0%, #4b6094 100%);
+    text-align: center;
+    margin-bottom: 10px;
+    max-height: auto;
 }
 
 @mixin flex-center ($direction) {
@@ -13,3 +33,33 @@
     flex-direction: $direction;
 }
 
+@mixin flex-variable ($direction, $justify, $align, $wrap) {
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-content: $align;
+    flex-wrap: $wrap;
+}
+
+@mixin card{
+    background-color: $bg-card;
+    font-family: $font-primary;
+    height: 300px;
+    width: 300px;
+    z-index: 1000;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(255,255,255,1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(255,255,255,1);
+    box-shadow: 10px 10px 5px 0px rgba(255,255,255,1);
+    border-radius: 25%;
+}
+
+@mixin card-mobile {
+    background-color: $bg-card;
+    margin-top: 35px;
+    font-family: $font-primary;
+    height: 350px;
+    z-index: 1000;
+    border-radius: 15%;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(255,255,255,1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(255,255,255,1);
+    box-shadow: 10px 10px 5px 0px rgba(255,255,255,1);
+}

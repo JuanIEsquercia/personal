@@ -1,0 +1,60 @@
+.sec-deptos {
+    @include box-dos-variante;
+    display: grid;
+    grid-template-areas:
+        "uno dos"
+        "tres cuatro";
+    justify-items: center;
+    gap: 30px;
+    padding: 30px;
+    font-family: $font-primary;
+
+    .div-depto {
+        height: auto;
+        width: 70%;
+        background-color: $bg-card;
+
+        .h-hidden {
+            overflow: hidden;
+
+            h4 {
+                overflow: hidden;
+            }
+
+            div {
+                ul {
+                    li {
+                        a {
+
+
+                            &:hover {
+                                background-color: $color-primary;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        img {
+            height: 230px;
+        }
+    }
+
+    .depto-uno {
+        grid-area: uno;
+    }
+
+    .depto-dos {
+        grid-area: dos;
+    }
+
+    .depto-tres {
+        grid-area: tres;
+    }
+
+    .depto-cuatro {
+        grid-area: cuatro;
+    }
+}

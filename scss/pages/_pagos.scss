@@ -1,0 +1,32 @@
+.sec-pagos {
+    @include box-dos;
+    @include flex-variable (column, space-around, center, wrap);
+    display: flex;
+    font-family: $font-primary;
+    color: white;
+
+    div {
+        display: flex;
+        @include flex-variable (column, space-around, center, wrap);
+
+        h3 {
+            overflow-y: hidden;
+            text-transform: uppercase;
+        }
+
+        .div-pagos {
+            p {
+                font-size: map-get($text, text-desktop);
+            }
+        }
+
+        .img-pagos {
+            display: flex;
+            @include flex-variable (row, space-around, center, wrap);
+            width: 100%;
+            img {
+                height: 100px;
+            }
+        }
+    }
+}

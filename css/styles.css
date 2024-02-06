@@ -12,17 +12,45 @@
     opacity: 1;
   }
 }
+.boton {
+  background-color: #4b6094;
+  font-family: "Nunito", sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 .navegador {
   position: fixed;
   padding: 20px;
   background-color: white;
+  background-color: #c9ccd3;
+  z-index: 10000;
+}
+.navegador div a {
+  position: relative;
+  color: #131929;
+  text-decoration: none;
+}
+.navegador div a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #a8815b;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.navegador div a:hover::before {
+  transform: scaleX(1);
 }
 
 .titulo {
@@ -30,22 +58,211 @@
   width: 100%;
   box-sizing: border-box;
   background: linear-gradient(90deg, #4b6094 0%, #a8815b 100%);
+  text-align: center;
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
   flex-direction: column;
-}
-.titulo .titulo__h {
-  animation: focus-in-contract-bck 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  color: #fff;
   font-family: "Nunito", sans-serif;
+}
+.titulo .titulo-h {
+  animation: focus-in-contract-bck 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   font-size: 40px;
-  text-align: center;
   overflow-y: hidden;
 }
-.titulo .titulo__p {
-  font-family: "Nunito", sans-serif;
+.titulo .titulo-p {
   text-align: center;
+  font-size: 26px;
+}
+
+footer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 200px;
+  font-family: "Nunito", sans-serif;
+}
+footer .lista-pie {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+footer .lista-pie a {
+  text-decoration: none;
+  color: #131929;
+}
+footer p {
+  text-align: center;
+}
+footer p .icon-copy {
+  margin-right: 7px;
+}
+
+.sec-tarjetas {
+  height: 600px;
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #4b6094 0%, #a8815b 100%);
+  text-align: center;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.sec-tarjetas div {
+  background-color: rgba(255, 255, 255, 0.78);
+  font-family: "Nunito", sans-serif;
+  height: 300px;
+  width: 300px;
+  z-index: 1000;
+  -webkit-box-shadow: 10px 10px 5px 0px rgb(255, 255, 255);
+  -moz-box-shadow: 10px 10px 5px 0px rgb(255, 255, 255);
+  box-shadow: 10px 10px 5px 0px rgb(255, 255, 255);
+  border-radius: 25%;
+}
+.sec-tarjetas div h2 {
+  overflow-y: hidden;
+  font-size: 26px;
+  padding: 10%;
+  width: 100%;
+}
+.sec-tarjetas div h2 .icono-tarjetas {
+  margin-right: 10px;
+  height: 26px;
+}
+.sec-tarjetas div p {
+  padding: 15px;
+  text-align: center;
+}
+
+.sec-pagos {
+  height: 600px;
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #a8815b 0%, #4b6094 100%);
+  text-align: center;
+  margin-bottom: 10px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  display: flex;
+  font-family: "Nunito", sans-serif;
+  color: white;
+}
+.sec-pagos div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.sec-pagos div h3 {
+  overflow-y: hidden;
+  text-transform: uppercase;
+}
+.sec-pagos div .div-pagos p {
+  font-size: 22px;
+}
+.sec-pagos div .img-pagos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.sec-pagos div .img-pagos img {
+  height: 100px;
+}
+
+.sec-deptos {
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #a8815b 0%, #4b6094 100%);
+  text-align: center;
+  margin-bottom: 10px;
+  max-height: auto;
+  display: grid;
+  grid-template-areas: "uno dos" "tres cuatro";
+  justify-items: center;
+  gap: 30px;
+  padding: 30px;
+  font-family: "Nunito", sans-serif;
+}
+.sec-deptos .div-depto {
+  height: auto;
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.78);
+}
+.sec-deptos .div-depto .h-hidden {
+  overflow: hidden;
+}
+.sec-deptos .div-depto .h-hidden h4 {
+  overflow: hidden;
+}
+.sec-deptos .div-depto .h-hidden div ul li a:hover {
+  background-color: #a8815b;
+}
+.sec-deptos .div-depto img {
+  height: 230px;
+}
+.sec-deptos .depto-uno {
+  grid-area: uno;
+}
+.sec-deptos .depto-dos {
+  grid-area: dos;
+}
+.sec-deptos .depto-tres {
+  grid-area: tres;
+}
+.sec-deptos .depto-cuatro {
+  grid-area: cuatro;
+}
+
+.sec-info {
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #a8815b 0%, #4b6094 100%);
+  text-align: center;
+  margin-bottom: 10px;
+  max-height: auto;
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+}
+.sec-info .cartas-info {
+  background-color: rgba(255, 255, 255, 0.78);
+  font-family: "Nunito", sans-serif;
+  height: 300px;
+  width: 300px;
+  z-index: 1000;
+  -webkit-box-shadow: 10px 10px 5px 0px rgb(255, 255, 255);
+  -moz-box-shadow: 10px 10px 5px 0px rgb(255, 255, 255);
+  box-shadow: 10px 10px 5px 0px rgb(255, 255, 255);
+  border-radius: 25%;
+  border-radius: 0;
+  margin-top: 20px;
+}
+.sec-info .cartas-info .boton {
+  position: absolute;
+  bottom: 30px;
+  left: 115px;
 }
 
 /*# sourceMappingURL=styles.css.map */
